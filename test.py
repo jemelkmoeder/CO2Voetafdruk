@@ -1,5 +1,6 @@
 import streamlit as st
 import matplotlib.pyplot as plt
+import webbrowser
 
 st.title("CO2-voetafdruk Berekening")
 
@@ -53,3 +54,6 @@ if st.button("Bereken CO2-uitstoot"):
 
     # Toon de grafiek in Streamlit
     st.pyplot(fig)
+    
+if st.button("Hoe stoot ik minder CO2 uit? (Informatie)"):
+
