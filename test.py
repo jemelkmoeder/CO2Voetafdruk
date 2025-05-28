@@ -18,7 +18,7 @@ if st.button("Bereken CO2-uitstoot"):
     consumptieVlees = 27 * vlees
     totaal = uitstootAuto + uitstootTrein + uitstootVliegtuig + verbruikElektriciteit + consumptieVlees
     
-    st.write(f"#### Uw totale CO2-uitstoot per jaar: **{int(totaal)} kg**")
+    st.write(f"##### Uw totale CO2-uitstoot per jaar: **{int(totaal)} kg**")
     st.write(f"- 🚗 Auto: **{int(uitstootAuto)} kg**")
     st.write(f"- 🚆 Trein: **{int(uitstootTrein)} kg**")
     st.write(f"- ✈️ Vliegtuig: **{int(uitstootVliegtuig)} kg**")
@@ -32,7 +32,7 @@ if st.button("Bereken CO2-uitstoot"):
     if totaal == 5202.5:
         st.write("🔄 U stoot precies evenveel CO2 uit als de gemiddelde Nederlander.")
 
-    st.write(f"#### Uw totale CO2-uitstoot per jaar vergeleken met de gemiddelde Nederlander.")
+    st.write(f"##### Uw totale CO2-uitstoot per jaar vergeleken met de gemiddelde Nederlander.")
     
     categorieën = ["Auto", "Trein", "Vliegtuig", "Elektriciteit", "Vlees"]
     UitstootGebruiker = [uitstootAuto, uitstootTrein, uitstootVliegtuig, verbruikElektriciteit, consumptieVlees]
