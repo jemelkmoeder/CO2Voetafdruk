@@ -2,14 +2,12 @@ import streamlit as st
 
 st.title("CO2-voetafdruk Berekening")
 
-# Invoervelden
-auto = st.number_input("Hoeveel km reis jij per jaar met uw auto?", min_value=0.0, format="%.2f")
-trein = st.number_input("Hoeveel km reis jij per jaar met de trein?", min_value=0.0, format="%.2f")
-vliegtuig = st.number_input("Hoeveel km reis jij per jaar met het vliegtuig?", min_value=0.0, format="%.2f")
-elektriciteit = st.number_input("Hoeveel elektriciteit in kWh verbruikt u per maand?", min_value=0.0, format="%.2f")
-vlees = st.number_input("Hoeveel kilogram vlees consumeert u per jaar?", min_value=0.0, format="%.2f")
+auto = st.number_input("Hoeveel km reis jij per jaar met uw auto?", min_value=0, value=0, step=1)
+trein = st.number_input("Hoeveel km reis jij per jaar met de trein?", min_value=0, value=0, step=1)
+vliegtuig = st.number_input("Hoeveel km reis jij per jaar met het vliegtuig?", min_value=0, value=0, step=1)
+elektriciteit = st.number_input("Hoeveel elektriciteit in kWh verbruikt u per maand?", min_value=0, value=0, step=1)
+vlees = st.number_input("Hoeveel kilogram vlees consumeert u per jaar?", min_value=0, value=0, step=1)
 
-# Berekening en weergave na klikken op de knop
 if st.button("Bereken CO2-uitstoot"):
     uitstootAuto = 0.2 * auto
     uitstootTrein = 0.05 * trein
@@ -27,7 +25,7 @@ if st.button("Bereken CO2-uitstoot"):
 
     if totaal > 5202.5:
         st.write(f"⚠️ U stoot **{int(totaal - 5202.5)} kg meer** CO2 uit dan de gemiddelde Nederlander.")
-    elif totaal < 5202.5:
+    if totaal < 5202.5:
         st.write(f"✅ U stoot **{int(5202.5 - totaal)} kg minder** CO2 uit dan de gemiddelde Nederlander.")
-    else:
+    if totaal == 5202.5:
         st.write("🔄 U stoot precies evenveel CO2 uit als de gemiddelde Nederlander.")
