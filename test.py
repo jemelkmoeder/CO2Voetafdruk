@@ -1,7 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 
-st.title("Lieve hendriks of Hendriksen stop eens met klagen!!!")
+st.title("Lieve stinkt")
 
 # Invoervelden
 auto = st.number_input("Hoeveel km reist u per jaar met uw auto?", min_value=0, value=None, step=1)
