@@ -1,7 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 
-st.title("CO2-voetafdruk Berekening")
+st.title("Uw CO2-voetafdruk brekenen")
 
 # Invoervelden
 auto = st.number_input("Hoeveel km reis jij per jaar met uw auto?", min_value=0, value=0, step=1)
@@ -32,7 +32,7 @@ if st.button("Bereken CO2-uitstoot"):
     if totaal == 5202.5:
         st.write("🔄 U stoot precies evenveel CO2 uit als de gemiddelde Nederlander.")
 
-    st.write(f"### Uw totale CO2-uitstoot per jaar vergeleken met het gemiddelde.")
+    st.write(f"### Uw totale CO2-uitstoot per jaar vergeleken met de gemiddelde Nederlander.")
     
     categorieën = ["Auto", "Trein", "Vliegtuig", "Elektriciteit", "Vlees"]
     UitstootGebruiker = [uitstootAuto, uitstootTrein, uitstootVliegtuig, verbruikElektriciteit, consumptieVlees]
