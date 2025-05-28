@@ -3,11 +3,11 @@ import streamlit as st
 st.title("CO2-voetafdruk Berekening")
 
 # Invoervelden
-auto = st.number_input("Hoeveel km reis jij per jaar met uw auto?", min_value=0.0, format="%.2f")
-trein = st.number_input("Hoeveel km reis jij per jaar met de trein?", min_value=0.0, format="%.2f")
-vliegtuig = st.number_input("Hoeveel km reis jij per jaar met het vliegtuig?", min_value=0.0, format="%.2f")
-elektriciteit = st.number_input("Hoeveel elektriciteit in kWh verbruikt u per maand?", min_value=0.0, format="%.2f")
-vlees = st.number_input("Hoeveel kilogram vlees consumeert u per jaar?", min_value=0.0, format="%.2f")
+auto = st.number_input("Hoeveel km reis jij per jaar met uw auto?", min_value=0, format="%.2f")
+trein = st.number_input("Hoeveel km reis jij per jaar met de trein?", min_value=0, format="%.2f")
+vliegtuig = st.number_input("Hoeveel km reis jij per jaar met het vliegtuig?", min_value=0, format="%.2f")
+elektriciteit = st.number_input("Hoeveel elektriciteit in kWh verbruikt u per maand?", min_value=0, format="%.2f")
+vlees = st.number_input("Hoeveel kilogram vlees consumeert u per jaar?", min_value=0, format="%.2f")
 
 # Berekening en weergave na klikken op de knop
 if st.button("Bereken CO2-uitstoot"):
