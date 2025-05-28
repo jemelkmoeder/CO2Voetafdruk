@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 st.title("Uw CO2-voetafdruk brekenen")
 
 # Invoervelden
-auto = st.number_input("Hoeveel km reis jij per jaar met uw auto?", min_value=0, value=0, step=1)
+auto = st.number_input("Hoeveel km reis jij per jaar met uw auto?", min_value=0, step=1)
 trein = st.number_input("Hoeveel km reis jij per jaar met de trein?", min_value=0, value=0, step=1)
 vliegtuig = st.number_input("Hoeveel km reis jij per jaar met het vliegtuig?", min_value=0, value=0, step=1)
 elektriciteit = st.number_input("Hoeveel elektriciteit in kWh verbruikt u per maand?", min_value=0, value=0, step=1)
