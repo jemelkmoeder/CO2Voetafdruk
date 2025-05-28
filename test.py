@@ -32,7 +32,7 @@ if st.button("Bereken CO2-uitstoot"):
     if totaal == 5202.5:
         st.write("🔄 U stoot precies evenveel CO2 uit als de gemiddelde Nederlander.")
 
-    st.write(f"### Uw totale CO2-uitstoot per jaar vergeleken met het gemiddelde.**")
+    st.write(f"### Uw totale CO2-uitstoot per jaar vergeleken met het gemiddelde.")
     
     categorieën = ["Auto", "Trein", "Vliegtuig", "Elektriciteit", "Vlees"]
     UitstootGebruiker = [uitstootAuto, uitstootTrein, uitstootVliegtuig, verbruikElektriciteit, consumptieVlees]
