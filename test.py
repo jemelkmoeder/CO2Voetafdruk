@@ -1,4 +1,5 @@
 import streamlit as st
+import matplotlib.pyplot as plt
 
 st.title("CO2-voetafdruk Berekening")
 
