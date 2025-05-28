@@ -29,3 +29,22 @@ if st.button("Bereken CO2-uitstoot"):
         st.write(f"✅ U stoot **{int(5202.5 - totaal)} kg minder** CO2 uit dan de gemiddelde Nederlander.")
     if totaal == 5202.5:
         st.write("🔄 U stoot precies evenveel CO2 uit als de gemiddelde Nederlander.")
+    
+    categorieën = ["Auto", "Trein", "Vliegtuig", "Elektriciteit", "Vlees"]
+    UitstootGebruiker = [uitstootAuto, uitstootTrein, uitstootVliegtuig, verbruikElektriciteit, consumptieVlees]
+    GemiddeldeUitstoot = [2500, 59.5, 1050, 540, 1053]
+ 
+    fig, ax = plt.subplots(facecolor="lightgray")
+    ax.set_facecolor("whitesmoke")
+    bar_width = 0.4
+    x = range(len(categorieën))
+ 
+    ax.bar(x, UitstootGebruiker, width=bar_width, label="Uw verbruik", color="firebrick")
+    ax.bar([i + bar_width for i in x], GemiddeldeUitstoot, width=bar_width, label="Gemiddeld verbruik", color="navy")
+    ax.set_xticks([i + bar_width / 2 for i in x])
+    ax.set_xticklabels(categorieën)
+    ax.set_ylabel("CO2-uitstoot (kg)")
+    ax.set_title("Uw jaarlijkse CO2-uitstoot")
+    ax.legend()
+ 
+    plt.show()
