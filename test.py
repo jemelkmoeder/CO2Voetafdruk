@@ -56,4 +56,5 @@ if st.button("Bereken CO2-uitstoot"):
     st.pyplot(fig)
     
 if st.button("Hoe stoot ik minder CO2 uit? (Informatie)"):
+    webbrowser.open("https://pure-energie.nl/kennisbank/6-tips-om-jouw-co2-footprint-te-verkleinen/")
 
