@@ -10,7 +10,7 @@ vliegtuig = st.number_input("Hoeveel km reist u per jaar met het vliegtuig?", mi
 elektriciteit = st.number_input("Hoeveel elektriciteit in kWh verbruikt u per maand?", min_value=0, value=None, step=1)
 vlees = st.number_input("Hoeveel kilogram vlees consumeert u per jaar?", min_value=0, value=None, step=1)
 
-if st.button("Bereken CO2-uitstoot"):
+if st.button("Bereken CO2-uitstoot") and (auto !=string):
     uitstootAuto = 0.2 * auto
     uitstootTrein = 0.05 * trein
     uitstootVliegtuig = 0.25 * vliegtuig
