@@ -1,7 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 
-st.title("Uw CO2 voetafdruk berekenen.")
+st.title("Uw CO2 voetafdruk berekenen")
 
 # Invoervelden
 auto = st.number_input("Hoeveel km reist u per jaar met uw auto? (Gemiddelde Nederlander reist 12500 km per jaar)", min_value=0, value=None, step=1000)
