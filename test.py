@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 st.title("Uw CO2 voetafdruk berekenen")
 
 # Invoervelden
-auto = st.number_input("Hoeveel km reist u per jaar met uw auto?", min_value=0, value=None, step=1)
-trein = st.number_input("Hoeveel km reist u per jaar met de trein?", min_value=0, value=None, step=1)
-vliegtuig = st.number_input("Hoeveel km reist u per jaar met het vliegtuig?", min_value=0, value=None, step=1)
-elektriciteit = st.number_input("Hoeveel elektriciteit in kWh verbruikt u per maand?", min_value=0, value=None, step=1)
-vlees = st.number_input("Hoeveel kilogram vlees consumeert u per jaar?", min_value=0, value=None, step=1)
+auto = st.number_input("Hoeveel km reist u per jaar met uw auto? (Gemiddelde Nederlander reist 12500 km per jaar)", min_value=0, value=None, step=1000)
+trein = st.number_input("Hoeveel km reist u per jaar met de trein? (Gemiddelde Nederlander reist 1190 km per jaar)", min_value=0, value=None, step=100)
+vliegtuig = st.number_input("Hoeveel km reist u per jaar met het vliegtuig? (Gemiddelde Nederlander reist 4200 km per jaar)", min_value=0, value=None, step=100)
+elektriciteit = st.number_input("Hoeveel elektriciteit in kWh verbruikt u per maand? (Gemiddelde Nederlander verbruikt 100 kwh per maand)", min_value=0, value=None, step=5)
+vlees = st.number_input("Hoeveel kilogram vlees consumeert u per jaar? (Gemiddelde Nederlander eet 39 kg per jaar)", min_value=0, value=None, step=1)
 
 if st.button("Bereken CO2-uitstoot"):
     uitstootAuto = 0.2 * auto
