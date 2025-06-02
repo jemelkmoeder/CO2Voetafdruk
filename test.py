@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 
 st.title("Uw CO2 voetafdruk berekenen")
 
-# Invoervelden
 auto = st.number_input("Hoeveel km reist u per jaar met uw auto? (Gemiddelde Nederlander reist 12500 km per jaar)", min_value=0, value=None, step=1000)
 trein = st.number_input("Hoeveel km reist u per jaar met de trein? (Gemiddelde Nederlander reist 1190 km per jaar)", min_value=0, value=None, step=100)
 vliegtuig = st.number_input("Hoeveel km reist u per jaar met het vliegtuig? (Gemiddelde Nederlander reist 4200 km per jaar)", min_value=0, value=None, step=100)
@@ -51,8 +50,6 @@ if st.button("Bereken CO2-uitstoot"):
     ax.set_title("Uw jaarlijkse CO2-uitstoot")
     ax.legend()
 
-    # Toon de grafiek in Streamlit
     st.pyplot(fig)
     
 st.link_button("Hoe stoot ik minder CO2 uit? (Informatie)", "https://pure-energie.nl/kennisbank/6-tips-om-jouw-co2-footprint-te-verkleinen/")
-
